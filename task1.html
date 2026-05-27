@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chatbot</title>
+</head>
+
+<body style="font-family:Arial; text-align:center; padding-top:50px;">
+
+    <h1>Rule-Based Chatbot</h1>
+
+    <input type="text" id="userInput" placeholder="Type message">
+
+    <button onclick="reply()">Send</button>
+
+    <h2 id="response"></h2>
+
+    <script>
+
+        function reply() {
+
+            let input = document.getElementById("userInput").value.toLowerCase();
+
+            let response = "";
+
+            if(input == "hello") {
+                response = "Hi!";
+            }
+
+            else if(input == "how are you") {
+                response = "I am fine.";
+            }
+
+            else if(input == "bye") {
+                response = "Goodbye!";
+            }
+
+            else {
+                response = "Sorry, I don't understand.";
+            }
+
+            document.getElementById("response").innerHTML = response;
+        }
+
+    </script>
+
+</body>
+</html>
