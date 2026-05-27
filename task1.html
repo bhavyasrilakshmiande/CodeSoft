@@ -2,46 +2,88 @@
 <html>
 <head>
     <title>AI Chatbot</title>
-</head>
 
-<body style="font-family:Arial; text-align:center; padding-top:50px;">
-
-    <h1>Rule-Based Chatbot</h1>
-
-    <input type="text" id="userInput" placeholder="Type message">
-
-    <button onclick="reply()">Send</button>
-
-    <h2 id="response"></h2>
-
-    <script>
-
-        function reply() {
-
-            let input = document.getElementById("userInput").value.toLowerCase();
-
-            let response = "";
-
-            if(input == "hello") {
-                response = "Hi!";
-            }
-
-            else if(input == "how are you") {
-                response = "I am fine.";
-            }
-
-            else if(input == "bye") {
-                response = "Goodbye!";
-            }
-
-            else {
-                response = "Sorry, I don't understand.";
-            }
-
-            document.getElementById("response").innerHTML = response;
+    <style>
+        body{
+            font-family: Arial;
+            text-align:center;
+            background:#f0f4ff;
+            padding-top:50px;
         }
 
-    </script>
+        .box{
+            background:white;
+            width:300px;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        input{
+            padding:10px;
+            width:70%;
+        }
+
+        button{
+            padding:10px;
+            background:blue;
+            color:white;
+            border:none;
+        }
+
+        #response{
+            margin-top:20px;
+            font-size:20px;
+            color:darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>AI Chatbot</h1>
+
+<input type="text" id="userInput" placeholder="Type message">
+
+<button onclick="reply()">Send</button>
+
+<div id="response"></div>
+
+</div>
+
+<script>
+
+function reply(){
+
+let input =
+document.getElementById("userInput").value.toLowerCase();
+
+let response = "";
+
+if(input == "hello"){
+response = "Hi!";
+}
+
+else if(input == "how are you"){
+response = "I am fine.";
+}
+
+else if(input == "bye"){
+response = "Goodbye!";
+}
+
+else{
+response = "Sorry, I don't understand.";
+}
+
+document.getElementById("response").innerHTML = response;
+
+}
+
+</script>
 
 </body>
 </html>
